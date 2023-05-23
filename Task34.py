@@ -8,3 +8,20 @@
 *Пример:*
 **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да    
     **Вывод:** Парам пам-пам  """
+    
+def ritm(text):
+    text = text.lower().split()
+    list_count = []
+    for word in text:
+        sum_w = 0
+        for i in word:
+            if i in 'аеёиоуыэюя':
+                sum_w += 1
+        list_count.append(sum_w)
+    return len(list_count) == list_count.count(list_count[0])
+
+
+if ritm(input("Стихотворение :")):
+    print('Парам пам-пам')
+else:
+    print('Пам парам')

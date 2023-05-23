@@ -13,3 +13,15 @@
 4 8 12 16 20 24
 5 10 15 20 25 30
 6 12 18 24 30 36"""
+
+def print_operation_table(operation,num_rows,num_columns):   
+    for i in range(1,num_rows+1):
+        print()
+        for j in range(1,num_columns+1):
+            print(operation(i,j), end=" \t  ")
+    print()
+
+#Условие изменено/дополнено: вводим только выражение для расчета
+print_operation_table( eval("lambda x, y:"+input("Введите выражение с переменными 'x' и/или 'y'(например x*y или x^2): ")),6,6)
+
+
